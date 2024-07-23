@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\checker\bin\Release\net8.0\checker.exe
+C:\Users\USER\source\repos\checker\bin\Release\net8.0\checker.deps.json
+C:\Users\USER\source\repos\checker\bin\Release\net8.0\checker.runtimeconfig.json
+C:\Users\USER\source\repos\checker\bin\Release\net8.0\checker.dll
+C:\Users\USER\source\repos\checker\bin\Release\net8.0\checker.pdb
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.AssemblyInfo.cs
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.dll
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\refint\checker.dll
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.pdb
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\checker.genruntimeconfig.cache
+C:\Users\USER\source\repos\checker\obj\Release\net8.0\ref\checker.dll
