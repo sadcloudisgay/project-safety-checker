@@ -1,14 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
 class Program
 {
-    // Define an extensive list of suspicious patterns
     static readonly List<Regex> HighRiskPatterns = new List<Regex>
     {
-        // Command executions
         new Regex(@"<Exec Command=.*cmd\.exe", RegexOptions.IgnoreCase),
         new Regex(@"<Exec Command=.*powershell", RegexOptions.IgnoreCase),
         new Regex(@"<Exec Command=.*curl", RegexOptions.IgnoreCase),
@@ -42,14 +40,12 @@ class Program
         new Regex(@"<Exec Command=.*net\s+user", RegexOptions.IgnoreCase),
         new Regex(@"<Exec Command=.*net\s+localgroup", RegexOptions.IgnoreCase),
 
-        // Build and target manipulations
         new Regex(@"<Target Name="".*"" AfterTargets=""Build""", RegexOptions.IgnoreCase),
         new Regex(@"<Target Name="".*"" BeforeTargets=""Build""", RegexOptions.IgnoreCase),
         new Regex(@"<UsingTask TaskName="".*"" TaskFactory=""CodeTaskFactory""", RegexOptions.IgnoreCase),
         new Regex(@"<UsingTask TaskName="".*"" AssemblyFile="".*""", RegexOptions.IgnoreCase),
         new Regex(@"<Target Name="".*"" DependsOnTargets="".*""", RegexOptions.IgnoreCase),
 
-        // Indicators of potentially obfuscated code
         new Regex(@"\[System\.Text\.Encoding\]::Unicode\.GetString", RegexOptions.IgnoreCase),
         new Regex(@"\[System\.Convert\]::FromBase64String", RegexOptions.IgnoreCase),
         new Regex(@"System\.Reflection\.Assembly::Load", RegexOptions.IgnoreCase),
@@ -58,12 +54,10 @@ class Program
 
     static readonly List<Regex> LowerRiskPatterns = new List<Regex>
     {
-        // File and script imports
         new Regex(@"<Import Project="".*""", RegexOptions.IgnoreCase),
         new Regex(@"<Import Project=.*\.props", RegexOptions.IgnoreCase),
         new Regex(@"<Import Project=.*\.targets", RegexOptions.IgnoreCase),
 
-        // Potentially less dangerous build and target manipulations
         new Regex(@"<PropertyGroup>", RegexOptions.IgnoreCase),
         new Regex(@"<ItemGroup>", RegexOptions.IgnoreCase),
         new Regex(@"<Reference Include="".*""", RegexOptions.IgnoreCase)
@@ -71,7 +65,6 @@ class Program
 
     static void Main(string[] args)
     {
-        // Prompt user to input the directory to scan
         Console.WriteLine("Please enter the directory you want to scan:");
         string directoryToScan = Console.ReadLine();
 
@@ -85,10 +78,8 @@ class Program
             Console.Clear();
         }
 
-        // Scan the directory
         var maliciousFiles = ScanDirectory(directoryToScan);
 
-        // Print the results
         if (maliciousFiles.Count > 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -101,7 +92,6 @@ class Program
                 Console.WriteLine();
                 foreach (var pattern in patterns)
                 {
-                    // Check if the pattern is high risk or lower risk
                     if (IsHighRiskPattern(pattern))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -172,13 +162,11 @@ class Program
         return (detectedPatterns.Count > 0, detectedPatterns);
     }
 
-    // Determine if a pattern is a high risk pattern
     static bool IsHighRiskPattern(string pattern)
     {
         return HighRiskPatterns.Exists(hp => hp.ToString() == pattern);
     }
 
-    // Determine if a pattern is a lower risk pattern
     static bool IsLowerRiskPattern(string pattern)
     {
         return LowerRiskPatterns.Exists(lr => lr.ToString() == pattern);
