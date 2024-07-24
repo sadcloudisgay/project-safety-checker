@@ -2,8 +2,6 @@ This program scans a specified directory for files that might contain suspicious
 It specifically looks at project and build files (like .csproj, .vcxproj, .sln, .props, and .targets). 
 The program helps you identify files that could potentially be harmful by checking for patterns that could indicate malicious behavior or dangerous code.
 
-# Detection Vectors
-
 # High risk patterns are highlighted in **red**
 
 # Medium to low risk patterns are highlighted in **yellow**
