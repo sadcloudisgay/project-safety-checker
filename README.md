@@ -3,23 +3,22 @@ It specifically looks at project and build files (like .csproj, .vcxproj, .sln, 
 The program helps you identify files that could potentially be harmful by checking for patterns that could indicate malicious behavior or dangerous code.
 
 # Detection Vectors
-Here is a list of all the detection vectors used by the program:
 
 High-Risk Patterns
 
-<Exec Command=.*cmd.exe
-<Exec Command=.*powershell
-<Exec Command=.*curl
-<Exec Command=.*wget
-<Exec Command=.*Invoke-WebRequest
-<Exec Command=.*Invoke-Expression
-<Exec Command=.*start-process
-<Exec Command=.*certutil
-<Exec Command=.*bash
-<Exec Command=.*sh
-<Exec Command=.*python
-<Exec Command=.*xcopy
-<Exec Command=.*robocopy
+`<Exec Command=.*cmd.exe
+`<Exec Command=.*powershell
+`<Exec Command=.*curl
+`<Exec Command=.*wget
+`<Exec Command=.*Invoke-WebRequest
+`<Exec Command=.*Invoke-Expression
+`<Exec Command=.*start-process
+`<Exec Command=.*certutil
+`<Exec Command=.*bash
+`<Exec Command=.*sh
+`<Exec Command=.*python
+`<Exec Command=.*xcopy
+`<Exec Command=.*robocopy
 <Exec Command=.*copy
 <Exec Command=.*move
 <Exec Command=.*del
