@@ -7,7 +7,7 @@ Here is a list of all the detection vectors used by the program:
 
 High-Risk Patterns
 
-<Exec Command=.*cmd\.exe
+<Exec Command=.*cmd.exe
 <Exec Command=.*powershell
 <Exec Command=.*curl
 <Exec Command=.*wget
@@ -58,12 +58,6 @@ File and Script Imports
 <Import Project=.*\.props
 <Import Project=.*\.targets
 Potentially Less Dangerous Build and Target Manipulations
-
-<PropertyGroup>
-<ItemGroup>
-<Reference Include=".*"
-
-# Potentially Less Dangerous Build and Target Manipulations
 
 <PropertyGroup>
 <ItemGroup>
