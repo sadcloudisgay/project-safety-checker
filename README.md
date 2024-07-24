@@ -12,5 +12,5 @@ The program helps you identify files that could potentially be harmful by checki
 
 # Preview
 
-![Example Image]([https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/example-image.png](https://cdn.discordapp.com/attachments/821489913844203522/1265461810719359076/image.png?ex=66a198a6&is=66a04726&hm=9a3b8340cb8d870307ff49e8a5917c749f65a038600ebdd9d1da74f92055907c&)
+![Example Image](https://cdn.discordapp.com/attachments/821489913844203522/1265461810719359076/image.png?ex=66a198a6&is=66a04726&hm=9a3b8340cb8d870307ff49e8a5917c749f65a038600ebdd9d1da74f92055907c&)
 
