@@ -4,60 +4,13 @@ The program helps you identify files that could potentially be harmful by checki
 
 # Detection Vectors
 
-High-Risk Patterns
+# High risk patterns are highlighted in red
 
-`<Exec Command=.*cmd.exe
-`<Exec Command=.*powershell
-`<Exec Command=.*curl
-`<Exec Command=.*wget
-`<Exec Command=.*Invoke-WebRequest
-`<Exec Command=.*Invoke-Expression
-`<Exec Command=.*start-process
-`<Exec Command=.*certutil
-`<Exec Command=.*bash
-`<Exec Command=.*sh
-`<Exec Command=.*python
-`<Exec Command=.*xcopy
-`<Exec Command=.*robocopy
-<Exec Command=.*copy
-<Exec Command=.*move
-<Exec Command=.*del
-<Exec Command=.*rm
-<Exec Command=.*nslookup
-<Exec Command=.*ping
-<Exec Command=.*tracert
-<Exec Command=.*ftp
-<Exec Command=.*tftp
-<Exec Command=.*netcat
-<Exec Command=.*nc
-<Exec Command=.*telnet
-<Exec Command=.*attrib
-<Exec Command=.*icacls
-<Exec Command=.*schtasks
-<Exec Command=.*taskkill
-<Exec Command=.*tasklist
-<Exec Command=.*net\s+user
-<Exec Command=.*net\s+localgroup
-Build and Target Manipulations
+# Medium to low risk patterns are highlighted in yellow
 
-<Target Name=".*" AfterTargets="Build"
-<Target Name=".*" BeforeTargets="Build"
-<UsingTask TaskName=".*" TaskFactory="CodeTaskFactory"
-<UsingTask TaskName=".*" AssemblyFile=".*"
-Indicators of Potentially Obfuscated Code
+# -----------------------------------------------------
 
-\[System\.Text\.Encoding\]::Unicode\.GetString
-\[System\.Convert\]::FromBase64String
-System\.Reflection\.Assembly::Load
-System\.IO\.File::ReadAllBytes
-Lower-Risk Patterns
-File and Script Imports
+# Preview
 
-<Import Project=".*"
-<Import Project=.*\.props
-<Import Project=.*\.targets
-Potentially Less Dangerous Build and Target Manipulations
+![Example Image]([https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/example-image.png](https://cdn.discordapp.com/attachments/821489913844203522/1265461810719359076/image.png?ex=66a198a6&is=66a04726&hm=9a3b8340cb8d870307ff49e8a5917c749f65a038600ebdd9d1da74f92055907c&)
 
-<PropertyGroup>
-<ItemGroup>
-<Reference Include=".*"
