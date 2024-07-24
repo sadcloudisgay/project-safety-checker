@@ -4,11 +4,9 @@ The program helps you identify files that could potentially be harmful by checki
 
 # Detection Vectors
 
-# High risk patterns are highlighted in red
+# High risk patterns are highlighted in **red**
 
-# Medium to low risk patterns are highlighted in yellow
-
-# -----------------------------------------------------
+# Medium to low risk patterns are highlighted in **yellow**
 
 # Preview
 
